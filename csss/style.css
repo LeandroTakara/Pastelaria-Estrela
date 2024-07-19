@@ -1,0 +1,169 @@
+ *{
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+.lista_pasteis{
+    list-style-type: none;
+    position: relative;
+    display: grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-inline-start: 0px;
+    grid-template-columns: repeat(4,260px);
+    row-gap: 36px;
+    column-gap: 50px;
+    justify-content: space-around;
+}
+
+.imagens_pasteis{
+    position: relative;
+    width: 85%;
+    height: 202px;
+    display:block;
+    margin: auto;
+    margin-top: 15px;
+    /*background-image: url(ayanami\ mac\ escrava.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;*/
+}
+
+.imagem_pastel{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.descricao{
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+}
+
+.texto_pasteis{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium';
+    color: white;
+    width: 50%;
+}
+
+.texto_descricao{
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium';
+    color: black;
+    margin-left: 2px;
+    margin-block-start: 0em;
+}
+
+.descricao_pasteis{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div_pasteis{
+    background-color: #7217bd;
+    border: solid red;
+    width: 260px;
+    height: 310px;
+}
+.lista_itens_div{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-inline-start: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+.butao_pastel{
+    width: 35%;
+    height: 20px;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.butao_mais{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    position: relative;
+}
+
+.butao_mais::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 20px;
+}
+.butao_mais::after{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 20px;
+    rotate: 90deg;
+}
+
+
+.butao_menos{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    position: relative;
+}
+
+.butao_menos::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 20px;
+}
+
+.butao_que_nao_e_butao{
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    outline: none;
+}
+
+.butao_que_nao_e_butao::-webkit-outer-spin-button,
+.butao_que_nao_e_butao::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.descricao:hover{
+    opacity: 85%;
+}
