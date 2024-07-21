@@ -2,38 +2,50 @@
     padding: 0;
     border: 0;
     margin: 0;
+    box-sizing: border-box;
   }
+
+main {
+    padding-block: 30px;
+    background-image: url('/Imagens pastelaria/fundo-de-madeira.jpg');
+    background-size: 100% auto;
+}
+
+.pastel_titulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding-block: 10px;
+    background-color: rgb(209, 115, 65);
+    max-width: 1000px;
+    margin-inline: auto;
+}
 
 .lista_pasteis{
     list-style-type: none;
     position: relative;
     display: grid;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 5%;
+    max-width: 800px;
+    margin-inline: auto;
     padding-inline-start: 0px;
-    grid-template-columns: repeat(4,260px);
-    row-gap: 36px;
-    column-gap: 50px;
-    justify-content: space-around;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 30px;
+    padding-inline: 10px;
+    font-size: 16px;
 }
 
 .imagens_pasteis{
     position: relative;
-    width: 85%;
-    height: 202px;
-    display:block;
-    margin: auto;
-    margin-top: 15px;
-    /*background-image: url(ayanami\ mac\ escrava.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;*/
+    height: 60%;
 }
 
 .imagem_pastel{
     width: 100%;
     height: 100%;
     z-index: 1;
+    object-fit: cover;
+    border: solid black 1px;
 }
 
 .descricao{
@@ -43,33 +55,53 @@
     width: 100%;
     height: 100%;
     opacity: 0%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .texto_pasteis{
     text-align: center;
     font-family: 'Franklin Gothic Medium';
     color: white;
-    width: 50%;
+    width: 100%;
+    font-size: 0.8em;
 }
 
 .texto_descricao{
     text-align: justify;
     font-family: 'Franklin Gothic Medium';
     color: black;
-    margin-left: 2px;
-    margin-block-start: 0em;
+    padding: 5px;
+    font-size: 0.8em;
 }
 
 .descricao_pasteis{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    height: 40%;
+}
+
+.info_pastel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    column-gap: 10px;
+}
+
+.preco_pastel {
+    font-size: 0.8em;
+    color: white;
 }
 
 .div_pasteis{
-    background-color: #7217bd;
-    border: solid red;
-    width: 260px;
-    height: 310px;
+    padding: 10px;
+    background-color: rgb(179, 93, 32);
+    border: solid black 1px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.1);
 }
 .lista_itens_div{
     display: flex;
@@ -90,11 +122,10 @@
 
 .butao_pastel{
     width: 35%;
-    height: 20px;
+    max-width: 80px;
+    height: 100%;
     display: flex;
-    box-sizing: border-box;
-    margin-top: 10px;
-    margin-right: 10px;
+    flex-grow: 1;
 }
 
 .butao_mais{
@@ -104,6 +135,7 @@
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     position: relative;
+    cursor: pointer;
 }
 
 .butao_mais::before{
@@ -138,6 +170,7 @@
     border-top-left-radius: 40%;
     border-bottom-left-radius: 40%;
     position: relative;
+    cursor: pointer;
 }
 
 .butao_menos::before{
@@ -167,4 +200,29 @@
 
 .descricao:hover{
     opacity: 85%;
+}
+
+.carrinho_butao {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: rgb(209, 115, 65);
+    padding: 10px 20px;
+    margin-inline: auto;
+    display: block;
+    width: max-content;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.carrinho_butao:hover {
+    background-color: rgb(252, 151, 97);
+    scale: 1.1;
+}
+
+@media (min-width: 700px) {
+    .lista_pasteis {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 250px;
+        font-size: 20px;
+    }
 }
