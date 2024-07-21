@@ -6,6 +6,8 @@
 }
 body{
     width: 100%;
+    background-image: url("/Imagens pastelaria/fundo-de-madeira.jpg");
+    background-size: 100% auto;
 }
 
 #pasteis_comprados{
@@ -39,15 +41,31 @@ body{
 .espaco_nome{
     height: 100%;
     width: 40%;
-    transform: translateX(-20%);
     align-content: center;
+}
+
+#texto_unitario{
+    font-size: 10px;
+    color: rgb(26, 25, 25);
 }
 
 .texto_caixa_pasteis{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transform: translateX(-120%);
     font-size: 20px;
-    text-align: left;
+    align-content: center;
+    text-align: center;
+}
+
+#caixa_preco_unitario{
+    width: 10%;
+}
+
+#caixa_precoT_por_produto{
+    width: 18%;
+}
+
+#texto_caixa_quantidade{
+    width: 10%;
 }
 
 #nome_do_pastel{
@@ -61,4 +79,34 @@ body{
     list-style-type: none;
     display: grid;
     row-gap: 30px;
+}
+
+@media (max-width: 1600px) {
+    #pasteis_comprados{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #pasteis_comprados{
+        width: 95%;
+    }
+
+    .div_cartao{
+        height: 200px;
+        display: grid;
+        grid-template-columns: repeat(3,110px);
+        grid-template-rows: repeat(2,110px);
+        row-gap: 5px;
+    }
+
+    #caixa_precoT_por_produto{
+        grid-column-start: 3;
+    }
+
+    #lista_caixa_pasteis li div img, #lista_caixa_pasteis li div div{
+        width: 100%;
+        height: 100%;
+    }
+
 }
