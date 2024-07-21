@@ -1,0 +1,222 @@
+:root {
+    --carousel-elements: 4;
+    --carousel-seconds: 30s;
+    --carouse-item-size: 200px;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+.presentation-section {
+    padding: 40px 20px;
+    background-color: rgb(223, 190, 108);
+    overflow: hidden;
+}
+
+.presentation-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 700px;
+    margin-block: 30px;
+    width: 100%;
+    height: calc(var(--carouse-item-size) + 50px);
+    padding: 20px 0;
+    margin-inline: auto;
+    mask: linear-gradient(
+        90deg, 
+        transparent,
+        white 20%,
+        white 80%,
+        transparent
+    );
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    height: var(--carouse-item-size);
+    width: var(--carouse-item-size);
+    box-shadow: 0 10px 14px 2px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    border-radius: 10px;
+    animation:
+        var(--carousel-seconds)
+        loop-around infinite linear
+        calc(var(--carousel-seconds) / var(--carousel-elements) * (var(--carousel-elements) + 2 - var(--n)) * -1);
+    z-index: -1;
+}
+
+.important-text-container {
+    padding: 15px;
+    max-width: fit-content  ;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    margin-inline: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pastel-section {
+    padding: 40px 20px;
+    background-color: rgb(161, 66, 40);
+    color: white;
+}
+
+.pastel-title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.pastel-content {
+    margin: 30px auto 0;
+}
+
+.pastel {
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin-inline: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.promo-text {
+    padding: 15px;
+    max-width: 500px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.review-section {
+    padding: 40px 20px;
+    background-color: rgb(223, 190, 108);
+}
+
+.review-title {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.review-container {
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.review-profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.review-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: solid black 2px;
+    border-radius: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+.review-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+}
+.review-icon::after {
+    content: '';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.review-content {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    line-height: 1.3rem;
+}
+.review-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    translate: -50% -50%;
+    border-left: solid transparent 15px;
+    border-right: solid transparent 15px;
+    border-bottom: solid white 11px;
+}
+
+@keyframes loop-around {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -900px;
+    }
+}
+
+@media (min-width: 700px) {
+    :root {
+        --carouse-item-size: 250px;
+    }
+
+    html {
+        font-size: 18px;
+    }
+
+    .pastel-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    .pastel {
+        width: 340px;
+        height: 340px;
+        margin: 0;
+    }
+
+    .promo-text {
+        position: static;
+        margin: 0;
+    }
+}

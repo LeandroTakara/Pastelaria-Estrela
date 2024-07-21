@@ -1,0 +1,138 @@
+:root {
+    --header-height: 80px;
+    --burger-icon-width: 30px;
+    --burger-icon-height: 5px;
+    --burger-icon-gap: 10px;
+    --header-bg-color: rgb(158, 138, 38);
+}
+
+.main-header {
+    width: 100%;
+    height: var(--header-height);
+    overflow-x: clip;
+}
+
+.main-header-container {
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.main-header-container-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    max-width: 1000px;
+    padding: 10px 20px;
+    margin-inline: auto;
+    background-color: var(--header-bg-color);
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.navigation-label {
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: inline-block;
+    position: relative;
+    width: var(--burger-icon-width);
+    height: var(--burger-icon-height);
+    background-color: white;
+}
+.burger-icon::before {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--burger-icon-gap));
+    width: var(--burger-icon-width);
+    height: var(--burger-icon-height);
+    background-color: white;
+}
+.burger-icon::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * var(--burger-icon-gap));
+    width: var(--burger-icon-width);
+    height: var(--burger-icon-height);
+    background-color: white;
+}
+
+.navigation-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.navigation-links {
+    position: absolute;
+    top: var(--header-height);
+    right: -150px;
+    width: 150px;
+    height: 100dvh;
+    background-color: var(--header-bg-color);
+    transition: right 0.5s;
+}
+
+.navigation-item {
+    padding-block: 8px;
+    text-align: center;
+    background-color: inherit;
+    transition: background-color 0.2s;
+    list-style: none;
+}
+
+.navigation-item a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.navigation-item:hover {
+    background-color: lightgray;
+}
+
+.navigation-checkbox:checked ~ .navigation-links {
+    right: 0;
+}
+
+@media (min-width: 800px) {
+    .navigation-label,
+    .navigation-checkbox {
+        display: none;
+    }
+
+    .navigation-links,
+    .navigation-checkbox:checked ~ .navigation-links {
+        display: flex;
+        gap: 20px;
+        position: relative;
+        top: auto;
+        right: auto;
+        border: none;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        transition: none;
+    }
+
+    .navigation-item {
+        padding: 0;
+        transition: scale 0.2;
+        background-color: transparent;
+    }
+
+    .navigation-item:hover {
+        scale: 1.2;
+        background-color: transparent;
+    }
+}
