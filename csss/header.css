@@ -15,10 +15,10 @@
 .main-header-container {
     position: fixed;
     width: inherit;
-    height: inherit;
     background-color: var(--header-bg-color);
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    height: var(--header-height);
 }
 
 .main-header-container-inner {
@@ -26,8 +26,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: inherit;
+    height: var(--header-height);
     max-width: 1000px;
+    box-sizing: border-box;
     padding: 10px 20px;
     margin-inline: auto;
     background-color: var(--header-bg-color);
