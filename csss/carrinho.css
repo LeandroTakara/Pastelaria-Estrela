@@ -15,8 +15,18 @@ body{
     width: 60%;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 5%;
+    margin-block: 30px;
     border-radius: 10px;
+}
+
+.carrinho_titulo {
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(216, 172, 59);
+    padding-block: 10px;
+    max-width: 1000px;
+    margin-inline: auto;
+    text-align: center;
 }
 
 .div_cartao{
