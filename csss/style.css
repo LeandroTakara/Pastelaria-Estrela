@@ -7,7 +7,7 @@
 
 main {
     padding-block: 30px;
-    background-image: url('/Imagens pastelaria/fundo-de-madeira.jpg');
+    background-image: url('../Imagens pastelaria/fundo-de-madeira.jpg');
     background-size: 100% auto;
 }
 
