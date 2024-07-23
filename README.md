@@ -2,6 +2,8 @@
 
 Bem-vindo ao site oficial da Pastelaria Estrela! Este repositório contém informações sobre o nosso site, incluindo instruções de instalação, configuração e uso.
 
+[Visite](https://devswordfish.github.io/Pastelaria-Estrela/)
+
 ## Descrição
 
 O site da Pastelaria Estrela é uma plataforma online que oferece informações sobre nossa pastelaria, incluindo nosso menu, serviços, e detalhes de contato. O objetivo é fornecer aos nossos clientes uma experiência fácil e agradável ao explorar nossos produtos e serviços.
