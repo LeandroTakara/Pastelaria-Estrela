@@ -19,6 +19,7 @@ main {
     background-color: rgb(209, 115, 65);
     max-width: 1000px;
     margin-inline: auto;
+    border-radius: 10px;
 }
 
 .lista_pasteis{
@@ -68,11 +69,11 @@ main {
 }
 
 .texto_descricao{
-    text-align: justify;
+    text-align: left;
     font-family: 'Franklin Gothic Medium';
     color: black;
     padding: 5px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .descricao_pasteis{
@@ -102,6 +103,7 @@ main {
     width: 100%;
     height: 100%;
     box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 .lista_itens_div{
     display: flex;
@@ -213,6 +215,7 @@ main {
     width: max-content;
     margin-top: 20px;
     font-size: 1.3rem;
+    border-radius: 10px;
 }
 .carrinho_butao:hover {
     background-color: rgb(252, 151, 97);

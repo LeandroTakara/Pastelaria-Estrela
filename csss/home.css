@@ -1,7 +1,7 @@
 :root {
     --carousel-elements: 4;
     --carousel-seconds: 30s;
-    --carouse-item-size: 200px;
+    --carousel-item-size: 200px;
 }
 
 * {
@@ -31,7 +31,7 @@ html {
     max-width: 700px;
     margin-block: 30px;
     width: 100%;
-    height: calc(var(--carouse-item-size) + 50px);
+    height: calc(var(--carousel-item-size) + 50px);
     padding: 20px 0;
     margin-inline: auto;
     mask: linear-gradient(
@@ -49,8 +49,8 @@ html {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    height: var(--carouse-item-size);
-    width: var(--carouse-item-size);
+    height: var(--carousel-item-size);
+    width: var(--carousel-item-size);
     box-shadow: 0 10px 14px 2px rgba(0, 0, 0, 0.2);
     object-fit: cover;
     border-radius: 10px;
@@ -133,6 +133,7 @@ html {
     column-gap: 10px;
 }
 
+/*
 .review-icon {
     position: relative;
     width: 50px;
@@ -163,7 +164,13 @@ html {
     height: 40px;
     border-radius: 100%;
     background-color: black;
-}
+} */
+ .image-profile{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+ }
 
 .review-content {
     position: relative;
@@ -195,7 +202,7 @@ html {
 
 @media (min-width: 700px) {
     :root {
-        --carouse-item-size: 250px;
+        --carousel-item-size: 250px;
     }
 
     html {
